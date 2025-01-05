@@ -1,0 +1,255 @@
+/* Загальний стиль */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: url("/card1.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll; /* Фон рухається разом зі сторінкою */
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ffcc00;
+}
+
+/* Кнопки менеджерів */
+.header-buttons a img {
+    height: 30px;
+    width: auto;
+    margin: 0 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-buttons a img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Секції */
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.section:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Форма заявки */
+#application-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Кнопки форми */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button.call-button,
+button#sendToTelegram {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.call-button:hover,
+button#sendToTelegram:hover {
+    background-color: #e68a00;
+    transform: scale(1.1);
+}
+
+/* Блок тарифів */
+.tariff-block {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tariff-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tariff-block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tariff-block ul li {
+    margin-bottom: 5px;
+}
+
+.tariff-block:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Блок Контакти */
+#contacts {
+    padding: 20px;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contacts h2 {
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details ul li {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: inherit; /* Використовує колір батьківського елемента */
+    text-decoration: none; /* Прибирає підкреслення */
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ffcc00; /* Змінює колір при наведенні */
+    text-decoration: underline;
+}
+
+.contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-buttons .contact-icon img {
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-buttons .contact-icon img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Подвал */
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    height: 120px;
+    width: auto;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #application-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .footer {
+        height: auto;
+        padding: 20px;
+    }
+}
